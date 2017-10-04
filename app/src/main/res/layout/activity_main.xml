@@ -1,69 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.jbuss.timerapp.activities.MainActivity">
+    android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginRight="48dp"
-        android:layout_marginStart="48dp"
-        android:gravity="center"
-        android:text="@string/start_timer"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.064"/>
+        tools:context="com.jbuss.timerapp.activities.MainActivity">
 
-    <EditText
-        android:id="@+id/duration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:ems="10"
-        android:gravity="center_horizontal"
-        android:hint="@string/enter_seconds"
-        android:inputType="numberSigned"
-        app:layout_constraintLeft_toLeftOf="@+id/textView"
-        app:layout_constraintRight_toRightOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"/>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginStart="48dp"
+            android:gravity="center"
+            android:text="@string/start_timer"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.064"/>
 
-    <com.ohoussein.playpause.PlayPauseView
-        android:id="@+id/play_pause_view"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="12dp"
-        android:clickable="true"
-        android:foreground="?android:selectableItemBackground"
-        app:fill_color="@color/gray_e1e1e1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/duration"
-        app:pause_bg="@color/colorPrimary"
-        app:play_bg="@color/colorPrimaryDark"/>
+        <EditText
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="@string/enter_seconds"
+            android:inputType="numberSigned"
+            app:layout_constraintLeft_toLeftOf="@+id/textView"
+            app:layout_constraintRight_toRightOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView"/>
 
-    <TextView
-        android:id="@+id/seconds_remaining"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/seconds_remaining"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/play_pause_view"/>
+        <com.ohoussein.playpause.PlayPauseView
+            android:id="@+id/play_pause_view"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:foreground="?android:selectableItemBackground"
+            app:fill_color="@color/gray_e1e1e1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/duration"
+            app:pause_bg="@color/colorPrimary"
+            app:play_bg="@color/colorPrimaryDark"/>
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/seconds_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/seconds_remaining"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/play_pause_view"/>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
